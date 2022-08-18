@@ -36,7 +36,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PathScrollView(path: "/Users/daniel/Documents/iProjects/iGithub/DHCode/iProjects/iGithub/DHCode", textSize: 20)
+        VStack {
+            PathScrollViewWrapper(path: "/Users/daniel/Documents/iProjects/iGithub/DHCode/iProjects/iGithub/DHCode",
+                                  defaultTextFont: .systemFont(ofSize: 14),
+                                  defaultTextColor: .textColor,
+                                  overTextColor: .yellow)
+            
+            PathScrollViewWrapper(path: "UsersdanielDocumentsiProjectsiGithubDHCodeiProjectsiGithubDHCode",
+                                  separator: "i",
+                                  defaultTextFont: .boldSystemFont(ofSize: 14))
+        }
             .padding()
     }
 }
